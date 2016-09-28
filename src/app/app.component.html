@@ -1,0 +1,18 @@
+
+<div class="container">
+
+<h1>{{title}}</h1>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor = "let item of ToDoList; let i = index">
+   {{i+1}}. {{item.pendingToDo}} <button class ="btn btn-danger" (click)="DeleteItem(i)">X</button>
+  </li>
+</ul>
+
+<hr />
+
+  Add New To Do List <br />
+  <input class="form-control" type="text" [(ngModel)]= addNew /><span></span>
+  <button class="btn btn-success" (click)="AddItem()">Add</button>
+</div>
+
